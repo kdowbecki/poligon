@@ -2,14 +2,15 @@ package poligon;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class AppTest {
 
+	private App sut = new App();
+
 	@Test
-	void testAppHasAGreeting() {
-		App sut = new App();
-		assertNotNull(sut.getGreeting());
+	void shouldSupportLombok() {
+		assertThat(sut.getVersion()).isNotBlank();
 	}
 
 }

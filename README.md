@@ -3,6 +3,7 @@
 A set of small projects for prototyping and faffing around with languages and libraries. Supported technologies:
 
 - Java
+- JMH
 - Kotlin
 - Spring Boot
 - Rust
