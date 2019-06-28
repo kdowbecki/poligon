@@ -1,13 +1,14 @@
 package poligon;
 
+import lombok.Getter;
+
 public class App {
 
-	public String getGreeting() {
-		return "Hello world.";
-	}
+	@Getter
+	private String version = "1";
 
 	public static void main(String[] args) {
-		System.out.println(new App().getGreeting());
+
 	}
 
 }
