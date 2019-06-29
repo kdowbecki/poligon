@@ -1,0 +1,7 @@
+[package]
+name = "poligon-rust"
+version = "0.1.0"
+authors = ["Karol Dowbecki <dowbecki@gmail.com>"]
+edition = "2018"
+
+[dependencies]
