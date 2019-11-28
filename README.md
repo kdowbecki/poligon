@@ -5,7 +5,6 @@ A set of small projects for prototyping and faffing around with languages and li
 - Java
 - JMH
 - Kotlin
-- Spring Boot
 - Rust
 
 ---
