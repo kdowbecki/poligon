@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("io.freefair.lombok") version "3.7.5"
+    id("io.freefair.lombok") version "4.1.5"
 }
 
 repositories {
@@ -9,10 +9,10 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:28.0-jre")
+    implementation("com.google.guava:guava:28.1-jre")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
-    testImplementation("org.assertj:assertj-core:3.11.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
+    testImplementation("org.assertj:assertj-core:3.14.0")
 }
 
 tasks.test {
@@ -20,6 +20,11 @@ tasks.test {
     testLogging {
         events("passed", "skipped", "failed")
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_13
+    targetCompatibility = JavaVersion.VERSION_13
 }
 
 application {
