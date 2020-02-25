@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("io.freefair.lombok") version "4.1.5"
+    id("io.freefair.lombok") version "5.0.0-rc4"
 }
 
 repositories {
@@ -13,6 +13,8 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
     testImplementation("org.assertj:assertj-core:3.14.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.3.0")
+
 }
 
 tasks.test {
