@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("io.freefair.lombok") version "5.0.0-rc4"
+    id("io.freefair.lombok") version "5.1.0"
 }
 
 repositories {
@@ -9,12 +9,11 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:28.1-jre")
+    implementation("com.google.guava:guava:29.0-jre")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
-    testImplementation("org.assertj:assertj-core:3.14.0")
-    testImplementation("org.mockito:mockito-junit-jupiter:3.3.0")
-
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
+    testImplementation("org.assertj:assertj-core:3.16.1")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.3.3")
 }
 
 tasks.test {
@@ -25,11 +24,10 @@ tasks.test {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_13
-    targetCompatibility = JavaVersion.VERSION_13
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
 }
 
 application {
-    // Define the main class for the application
     mainClassName = "poligon.App"
 }
