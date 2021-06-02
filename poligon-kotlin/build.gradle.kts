@@ -1,10 +1,10 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm").version("1.3.72")
+    id("org.jetbrains.kotlin.jvm").version("1.5.20-M1")
     application
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -15,5 +15,5 @@ dependencies {
 }
 
 application {
-    mainClassName = "poligon.AppKt"
+    mainClass.set("poligon.AppKt")
 }
