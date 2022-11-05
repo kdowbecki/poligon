@@ -1,5 +1,5 @@
 plugins {
-    id("me.champeau.gradle.jmh") version "0.5.3"
+    id("me.champeau.jmh") version "0.6.8"
 }
 
 repositories {
