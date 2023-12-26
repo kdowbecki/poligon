@@ -1,8 +1,0 @@
-[package]
-name = "poligon-rust"
-version = "0.1.0"
-authors = ["Karol Dowbecki"]
-edition = "2018"
-
-[dependencies]
-rand = "0.5.5"

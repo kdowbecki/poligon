@@ -1,7 +1,7 @@
 plugins {
   java
   application
-  id("io.freefair.lombok") version "6.5.1"
+  id("io.freefair.lombok") version "8.4"
 }
 
 repositories {
@@ -9,10 +9,10 @@ repositories {
 }
 
 dependencies {
-  implementation("com.google.guava:guava:31.1-jre")
-  testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
-  testImplementation("org.assertj:assertj-core:3.23.1")
-  testImplementation("org.mockito:mockito-junit-jupiter:4.8.0")
+  implementation("com.google.guava:guava:33.0.0-jre")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+  testImplementation("org.assertj:assertj-core:3.24.2")
+  testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
 }
 
 tasks.test {
@@ -23,8 +23,9 @@ tasks.test {
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_17
-  targetCompatibility = JavaVersion.VERSION_17
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(21))
+  }
 }
 
 application {
