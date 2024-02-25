@@ -11,6 +11,7 @@ repositories {
 dependencies {
   implementation("com.google.guava:guava:33.0.0-jre")
   testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
   testImplementation("org.assertj:assertj-core:3.24.2")
   testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
 }
