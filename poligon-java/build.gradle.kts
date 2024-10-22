@@ -1,7 +1,7 @@
 plugins {
   java
   application
-  id("io.freefair.lombok") version "8.4"
+  id("io.freefair.lombok") version "8.10.2"
 }
 
 repositories {
@@ -9,11 +9,11 @@ repositories {
 }
 
 dependencies {
-  implementation("com.google.guava:guava:33.0.0-jre")
-  testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+  implementation("com.google.guava:guava:33.2.1-jre")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-  testImplementation("org.assertj:assertj-core:3.24.2")
-  testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
+  testImplementation("org.assertj:assertj-core:3.26.3")
+  testImplementation("org.mockito:mockito-junit-jupiter:5.14.2")
 }
 
 tasks.test {
@@ -25,7 +25,7 @@ tasks.test {
 
 java {
   toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
+    languageVersion = JavaLanguageVersion.of(21)
   }
 }
 
@@ -37,8 +37,4 @@ tasks.withType<Jar> {
   manifest {
     attributes["Main-Class"] = "poligon.App"
   }
-}
-
-tasks.withType<JavaCompile>().forEach {
-  it.options.compilerArgs.add("--enable-preview")
 }
